@@ -5,6 +5,8 @@
  */
 package jhakasstaxi;
 
+import java.util.Date;
+
 /**
  *
  * @author 1895271
@@ -15,7 +17,12 @@ public class JhakassTaxi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Person person = new Person("Jameel","Altaf",512,"montreal","male");
+        Driver driver = new Driver("samriti",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
+        Customer customer = new Customer("321",new Date(),"premium","VISA","adult", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
+        Taxi taxi = new Taxi(1234, "Ambasedor", 4);
+        Drive drive = new Drive(new Date(), 24, 24.0, "Sherbrooke", "Snowdon");
+        Rating rating = new Rating("14", "No comments");
     }
     
 }

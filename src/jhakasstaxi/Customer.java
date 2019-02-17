@@ -5,6 +5,8 @@
  */
 package jhakasstaxi;
 
+import java.util.Date;
+
 /**
  *
  * @author 1896513
@@ -12,12 +14,12 @@ package jhakasstaxi;
 public class Customer extends Person {
 
     String cutomerId;
-    String registraionDate;
+    Date registraionDate;
     String type;
     String paymentMethod;
     String category;
 
-    public Customer(String cutomerId, String registraionDate, String type, String paymentMethod, String category, String firstName, String lastName, int phoneNo, String address, String gender) {
+    public Customer(String cutomerId, Date registraionDate, String type, String paymentMethod, String category, String firstName, String lastName, int phoneNo, String address, String gender) {
         super(firstName, lastName, phoneNo, address, gender);
         this.cutomerId = cutomerId;
         this.registraionDate = registraionDate;
@@ -34,11 +36,11 @@ public class Customer extends Person {
         return cutomerId;
     }
 
-    public void setRegistraionDate(String registraionDate) {
+    public void setRegistraionDate(Date registraionDate) {
         this.registraionDate = registraionDate;
     }
 
-    public String getRegistraionDate() {
+    public Date getRegistraionDate() {
         return registraionDate;
     }
 
