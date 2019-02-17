@@ -14,8 +14,6 @@ public class Taxi {
     int taxiNumber;
     String model;
     int capacity;
-    Driver driver;
-    
 
     public Taxi(int taxiNumber, String model, int capacity) {
         this.taxiNumber = taxiNumber;
@@ -45,5 +43,4 @@ public class Taxi {
     public int getCapacity() {
         return capacity;
     }
-
 }
