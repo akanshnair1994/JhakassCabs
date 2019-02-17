@@ -17,6 +17,7 @@ public class JhakassTaxi {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        System.out.println("---------------------Initial Details---------------------");
         Person person = new Person("Jameel","Altaf",512,"montreal","male");
         Driver driver = new Driver("samriti",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
         Customer customer = new Customer("321",new Date(),"premium","VISA","adult", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
@@ -33,6 +34,7 @@ public class JhakassTaxi {
         
         System.out.println();
         
+        System.out.println("---------------------Changed Details---------------------");
         person = new Person("Harsh","Acharya",512,"montreal","male");
         driver = new Driver("Harsh",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
         customer = new Customer("1234",new Date(),"Gold","DC","child", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
