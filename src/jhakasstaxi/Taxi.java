@@ -14,7 +14,7 @@ public class Taxi {
     int taxiNumber;
     String Model;
     int Capacity;
-    Driver deiver;
+    Driver driver;
     
 
     public Taxi(int taxiNumber, String Model, int Capacity) {
