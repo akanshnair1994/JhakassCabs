@@ -14,6 +14,8 @@ public class Taxi {
     int taxiNumber;
     String Model;
     int Capacity;
+    Driver deiver;
+    
 
     public Taxi(int taxiNumber, String Model, int Capacity) {
         this.taxiNumber = taxiNumber;
