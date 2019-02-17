@@ -22,27 +22,27 @@ public class Taxi {
         this.model = model;
     }
 
-    public void settaxiNumber(int taxiNumber) {
+    public void setTaxiNumber(int taxiNumber) {
         this.taxiNumber = taxiNumber;
     }
 
-    public int gettaxiNumber() {
+    public int getTaxiNumber() {
         return taxiNumber;
     }
 
-    public void setmodel(String model) {
+    public void setModel(String model) {
         this.model = model;
     }
 
-    public String getmodel() {
+    public String getModel() {
         return model;
     }
 
-    public void setcapacity(int capacity) {
+    public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
 
-    public int getcapacity() {
+    public int getCapacity() {
         return capacity;
     }
 
