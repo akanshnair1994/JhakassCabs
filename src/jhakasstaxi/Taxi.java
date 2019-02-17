@@ -12,14 +12,14 @@ package jhakasstaxi;
 public class Taxi {
 
     int taxiNumber;
-    String Model;
-    int Capacity;
+    String model;
+    int capacity;
     Driver driver;
     
 
-    public Taxi(int taxiNumber, String Model, int Capacity) {
+    public Taxi(int taxiNumber, String model, int capacity) {
         this.taxiNumber = taxiNumber;
-        this.Model = Model;
+        this.model = model;
     }
 
     public void settaxiNumber(int taxiNumber) {
@@ -30,20 +30,20 @@ public class Taxi {
         return taxiNumber;
     }
 
-    public void setModel(String Model) {
-        this.Model = Model;
+    public void setmodel(String model) {
+        this.model = model;
     }
 
-    public String getModel() {
-        return Model;
+    public String getmodel() {
+        return model;
     }
 
-    public void setCapacity(int Capacity) {
-        this.Capacity = Capacity;
+    public void setcapacity(int capacity) {
+        this.capacity = capacity;
     }
 
-    public int getCapacity() {
-        return Capacity;
+    public int getcapacity() {
+        return capacity;
     }
 
 }
