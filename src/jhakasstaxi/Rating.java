@@ -10,23 +10,30 @@ package jhakasstaxi;
  * @author temp
  */
 public class Rating {
+
     String Rate;
     String Comment;
-    
+    Drive drive;
+    Customer customer;
+
     public Rating(String Rate, String Comment) {
-        this.Rate=Rate;
-        this.Comment=Comment;
-        
+        this.Rate = Rate;
+        this.Comment = Comment;
+
     }
-       public void setRate(String Rate) {
-           this.Rate=Rate;
-       }     
+
+    public void setRate(String Rate) {
+        this.Rate = Rate;
+    }
+
     public String getRate() {
         return Rate;
     }
+
     public void setComment(String Comment) {
-        this.Comment=Comment;
+        this.Comment = Comment;
     }
+
     public String getComment() {
         return Comment;
     }
