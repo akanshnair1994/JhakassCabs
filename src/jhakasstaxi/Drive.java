@@ -59,4 +59,8 @@ public class Drive {
     public String getDestination() {
         return destination;
     }
+    
+    public void displayDrive() {
+        System.out.println("Date of drive: " + dateOfDrive + " Duration: " + duration + " Distance: " + distance + " Origin: " + origin + " Destination: " + destination);
+    }
 }
