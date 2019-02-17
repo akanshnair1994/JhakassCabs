@@ -11,30 +11,30 @@ package jhakasstaxi;
  */
 public class Rating {
 
-    String Rate;
-    String Comment;
+    String rate;
+    String comment;
     Drive drive;
     Customer customer;
 
-    public Rating(String Rate, String Comment) {
-        this.Rate = Rate;
-        this.Comment = Comment;
+    public Rating(String rate, String comment) {
+        this.rate = rate;
+        this.comment = comment;
 
     }
 
-    public void setRate(String Rate) {
-        this.Rate = Rate;
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 
     public String getRate() {
-        return Rate;
+        return rate;
     }
 
-    public void setComment(String Comment) {
-        this.Comment = Comment;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     public String getComment() {
-        return Comment;
+        return comment;
     }
 }
