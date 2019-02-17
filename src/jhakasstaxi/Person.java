@@ -13,14 +13,14 @@ public class Person {
 
     String firstName;
     String lastName;
-    int phoneno;
+    int phoneNo;
     String address;
     String gender;
 
-    public Person(String firstName, String lastName, int phoneno, String address, String gender) {
+    public Person(String firstName, String lastName, int phoneNo, String address, String gender) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.phoneno = phoneno;
+        this.phoneNo = phoneNo;
         this.address = address;
         this.gender = gender;
     }
@@ -41,27 +41,27 @@ public class Person {
         return lastName;
     }
 
-    public void setPhoneno(int Phoneno) {
-        this.phoneno = Phoneno;
+    public void setPhoneNo(int phoneNo) {
+        this.phoneNo = phoneNo;
     }
 
     public int getPhoneno() {
-        return phoneno;
+        return phoneNo;
     }
 
-    public void setaddress(String address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public String getaddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setgender(String gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public String getgender() {
+    public String getGender() {
         return gender;
     }
 
