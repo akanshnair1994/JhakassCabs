@@ -64,7 +64,8 @@ public class Person {
     public String getGender() {
         return gender;
     }
-     public void displayPerson() {
+
+    public void displayPerson() {
         System.out.println("First Name: " + firstName + "Last Name: " + lastName + " address: " + address + " Gender: " + gender);
     }
 

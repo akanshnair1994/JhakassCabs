@@ -67,6 +67,7 @@ public class Customer extends Person {
     public String getCategory() {
         return category;
     }
+
     public void displayCustomer() {
         System.out.println("Cutomer Id: " + cutomerId + "Registration Date: " + registraionDate + " type: " + type + " Payment Method: " + paymentMethod + "Category:" + category);
     }
