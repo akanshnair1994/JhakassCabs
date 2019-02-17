@@ -8,6 +8,9 @@ public class Drive {
     Double distance;
     String origin;
     String destination;
+    Taxi taxi;
+    Driver driver;
+    Customer customer;
     
     public Drive(Date dateOfDrive, int duration, Double distance, String origin, String destination) {
         this.dateOfDrive = dateOfDrive;
