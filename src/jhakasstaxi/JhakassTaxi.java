@@ -24,6 +24,7 @@ public class JhakassTaxi {
         Drive drive = new Drive(new Date(), 24, 24.0, "Sherbrooke", "Snowdon");
         Rating rating = new Rating("14", "No comments");
         
+        person.displayPerson();
         driver.displayDriver();
         drive.displayDrive();
         customer.displayPerson();
@@ -39,6 +40,7 @@ public class JhakassTaxi {
         drive = new Drive(new Date(), 24, 24.0, "St. Mathieu", "Sherbrooke");
         rating = new Rating("456", "Comments");
         
+        person.displayPerson();
         driver.displayDriver();
         drive.displayDrive();
         customer.displayPerson();

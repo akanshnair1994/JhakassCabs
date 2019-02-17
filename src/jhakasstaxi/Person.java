@@ -66,7 +66,7 @@ public class Person {
     }
 
     public void displayPerson() {
-        System.out.println("First Name: " + firstName + "Last Name: " + lastName + " address: " + address + " Gender: " + gender);
+        System.out.println("First Name: " + firstName + " Last Name: " + lastName + " Address: " + address + " Gender: " + gender);
     }
 
 }
