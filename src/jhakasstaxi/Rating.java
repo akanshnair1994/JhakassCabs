@@ -40,4 +40,4 @@ public class Rating {
     public void displayRating() {
         System.out.println("Driver's Rating: " + rate + " Comment " + comment );
     }
-    }
+}

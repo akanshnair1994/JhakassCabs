@@ -46,4 +46,4 @@ public class Taxi {
     public void displayTaxi() {
         System.out.println("Taxi Number: " + taxiNumber + " Model: " + model + " Capacity: " + capacity );
     }
-    }
+}
