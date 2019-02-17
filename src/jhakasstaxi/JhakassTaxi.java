@@ -23,6 +23,21 @@ public class JhakassTaxi {
         Taxi taxi = new Taxi(1234, "Ambasedor", 4);
         Drive drive = new Drive(new Date(), 24, 24.0, "Sherbrooke", "Snowdon");
         Rating rating = new Rating("14", "No comments");
+        
+        driver.displayDriver();
+        drive.displayDrive();
+        
+        System.out.println();
+        
+        person = new Person("Harsh","Acharya",512,"montreal","male");
+        driver = new Driver("Harsh",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
+        customer = new Customer("1234",new Date(),"Gold","DC","child", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
+        taxi = new Taxi(7894, "Galardo", 4);
+        drive = new Drive(new Date(), 24, 24.0, "St. Mathieu", "Sherbrooke");
+        rating = new Rating("456", "Comments");
+        
+        driver.displayDriver();
+        drive.displayDrive();
     }
     
 }
