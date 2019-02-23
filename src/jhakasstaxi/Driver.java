@@ -1,6 +1,7 @@
 package jhakasstaxi;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /*
@@ -51,7 +52,7 @@ public class Driver extends Person {
         return experience;
     }
 
-    public Driver(String driverName, int id, Date dateOfLicense, int experience, String firstName, String lastName, int phoneNo, String address, String gender) {
+    public Driver(Date newId, String driverName, int id, Date dateOfLicense, int experience, String firstName, String lastName, int phoneNo, String address, String gender) {
         super(firstName, lastName, phoneNo, address, gender);
         this.driverName = driverName;
         this.id = id;
