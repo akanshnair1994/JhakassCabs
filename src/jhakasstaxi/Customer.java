@@ -78,6 +78,7 @@ public class Customer extends Person {
         System.out.println("Type: " + type);
         System.out.println("Payment Method: " + paymentMethod);
         System.out.println("Category: " + category);
+        super.displayPerson();
         System.out.println("");
     }
 }

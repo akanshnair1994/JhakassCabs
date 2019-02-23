@@ -69,6 +69,7 @@ public class Driver extends Person {
         System.out.println("ID: " + id);
         System.out.println("Date of License: " + dateOfLicense);
         System.out.println("Experience: " + experience);
+        super.displayPerson();
         System.out.println();
     }
 }
