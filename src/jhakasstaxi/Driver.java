@@ -19,6 +19,7 @@ public class Driver extends Person {
     int id;
     Date dateOfLicense;
     int experience;
+    String newId;
 
     public void setDriverName(String DriverName) {
         driverName = DriverName;
@@ -52,8 +53,9 @@ public class Driver extends Person {
         return experience;
     }
 
-    public Driver(Date newId, String driverName, int id, Date dateOfLicense, int experience, String firstName, String lastName, int phoneNo, String address, String gender) {
-        super(firstName, lastName, phoneNo, address, gender);
+    public Driver(String driverName, int id, Date dateOfLicense, int experience, Date newIdSuper, String firstName, String lastName, int phoneNo, String address, String gender) {
+        super(newIdSuper, firstName, lastName, phoneNo, address, gender);
+        newId = createID(newIdSuper, driverName);
         this.driverName = driverName;
         this.id = id;
         this.dateOfLicense = dateOfLicense;
@@ -61,6 +63,12 @@ public class Driver extends Person {
     }
     
     public void displayDriver() {
-        System.out.println("Driver Name: " + driverName + " ID: " + id + " Date of License: " + dateOfLicense + " Experience: " + experience);
+        System.out.println("Driver Details: ");
+        System.out.println("ID: " + newId);
+        System.out.println("Driver Name: " + driverName);
+        System.out.println("ID: " + id);
+        System.out.println("Date of License: " + dateOfLicense);
+        System.out.println("Experience: " + experience);
+        System.out.println();
     }
 }
