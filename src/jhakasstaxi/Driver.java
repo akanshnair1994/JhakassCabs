@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author 1894832
  */
-public class Driver {
+public class Driver extends Person {
 
     String driverName;
     int id;
@@ -51,10 +51,15 @@ public class Driver {
         return experience;
     }
 
-    public Driver(String driverName, int id, Date dateOfLicense, int experience) {
+    public Driver(String driverName, int id, Date dateOfLicense, int experience, String firstName, String lastName, int phoneNo, String address, String gender) {
+        super(firstName, lastName, phoneNo, address, gender);
         this.driverName = driverName;
         this.id = id;
         this.dateOfLicense = dateOfLicense;
         this.experience = experience;
+    }
+    
+    public void displayDriver() {
+        System.out.println("Driver Name: " + driverName + " ID: " + id + " Date of License: " + dateOfLicense + " Experience: " + experience);
     }
 }
