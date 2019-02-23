@@ -9,15 +9,19 @@ package jhakasstaxi;
  *
  * @author temp
  */
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Taxi {
 
     int taxiNumber;
     String model;
     int capacity;
     Driver driver;
-    
+    String newId;
 
-    public Taxi(int taxiNumber, String model, int capacity) {
+    public Taxi(Date id, int taxiNumber, String model, int capacity) {
+        newId=createID(id, model);
         this.taxiNumber = taxiNumber;
         this.model = model;
     }
@@ -46,6 +50,47 @@ public class Taxi {
         return capacity;
     }
     public void displayTaxi() {
-        System.out.println("Taxi Number: " + taxiNumber + " Model: " + model + " Capacity: " + capacity );
+        System.out.println("ID: " + newId +" Taxi Number: " + taxiNumber + " Model: " + model + " Capacity: " + capacity );
+    }
+    
+    private String createID(Date newDate, String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        String date = sdf.format(newDate);
+        String[] dt = date.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
+        
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar.toUpperCase() + lChar.toUpperCase();
+        
+        return id;
     }
 }

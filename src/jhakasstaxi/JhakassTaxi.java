@@ -21,9 +21,9 @@ public class JhakassTaxi {
         Person person = new Person("Jameel","Altaf",512,"montreal","male");
         Driver driver = new Driver("samriti",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
         Customer customer = new Customer("321",new Date(),"premium","VISA","adult", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
-        Taxi taxi = new Taxi(1234, "Ambasedor", 4);
+        Taxi taxi = new Taxi(new Date(), 1234, "Ambasedor", 4);
         Drive drive = new Drive(new Date(), new Date(), 24, 24.0, "Sherbrooke", "Snowdon");
-        Rating rating = new Rating("14", "No comments");
+        Rating rating = new Rating(new Date(), "14", "No comments");
         
         person.displayPerson();
         driver.displayDriver();
@@ -38,9 +38,9 @@ public class JhakassTaxi {
         person = new Person("Harsh","Acharya",512,"montreal","male");
         driver = new Driver("Harsh",1234,new Date(),2, person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
         customer = new Customer("1234",new Date(),"Gold","DC","child", person.firstName, person.lastName, person.phoneNo, person.address, person.gender);
-        taxi = new Taxi(7894, "Galardo", 4);
+        taxi = new Taxi(new Date(), 7894, "Galardo", 4);
         drive = new Drive(new Date(), new Date(), 24, 24.0, "St. Mathieu", "Sherbrooke");
-        rating = new Rating("456", "Comments");
+        rating = new Rating(new Date(), "456", "Comments");
         
         person.displayPerson();
         driver.displayDriver();

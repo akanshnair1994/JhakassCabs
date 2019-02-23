@@ -5,6 +5,9 @@
  */
 package jhakasstaxi;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  *
  * @author temp
@@ -15,8 +18,10 @@ public class Rating {
     String comment;
     Drive drive;
     Customer customer;
+    String newId;
 
-    public Rating(String rate, String comment) {
+    public Rating(Date id, String rate, String comment) {
+        newId=createID(id, comment);
         this.rate = rate;
         this.comment = comment;
 
@@ -38,6 +43,47 @@ public class Rating {
         return comment;
     }
     public void displayRating() {
-        System.out.println("Driver's Rating: " + rate + " Comment " + comment );
+        System.out.println("ID: " + newId +" Driver's Rating: " + rate + " Comment " + comment );
+    }
+    
+    private String createID(Date newDate, String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        String date = sdf.format(newDate);
+        String[] dt = date.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
+        
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar.toUpperCase() + lChar.toUpperCase();
+        
+        return id;
     }
 }
