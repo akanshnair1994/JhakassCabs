@@ -1,8 +1,10 @@
 package jhakasstaxi;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Drive {
+    String newId;
     Date dateOfDrive;
     int duration;
     Double distance;
@@ -12,7 +14,8 @@ public class Drive {
     Driver driver;
     Customer customer;
     
-    public Drive(Date dateOfDrive, int duration, Double distance, String origin, String destination) {
+    public Drive(Date id, Date dateOfDrive, int duration, Double distance, String origin, String destination) {
+        newId = createID(id, origin);
         this.dateOfDrive = dateOfDrive;
         this.duration = duration;
         this.distance = distance;
@@ -61,6 +64,47 @@ public class Drive {
     }
     
     public void displayDrive() {
-        System.out.println("Date of drive: " + dateOfDrive + " Duration: " + duration + " Distance: " + distance + " Origin: " + origin + " Destination: " + destination);
+        System.out.println("ID: " + newId + " Date of drive: " + dateOfDrive + " Duration: " + duration + " Distance: " + distance + " Origin: " + origin + " Destination: " + destination);
+    }
+    
+    private String createID(Date newDate, String name) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
+        String date = sdf.format(newDate);
+        String[] dt = date.split("-");
+        String dtInt;
+        if (Integer.parseInt(dt[2]) % 2 == 0)
+            dtInt = "E";
+        else
+            dtInt = "O";
+        String mnt = dt[1];
+        String yr = dt[0].substring(2);
+        String fChar = "";
+        if (name.length() == 1)
+            fChar += "X";
+        if (name.length() == 2)
+            fChar += name;
+        else if (name.equals(""))
+            fChar = "XX";
+        else
+            fChar = name.substring(0, 1);
+        
+        String lChar = "";
+        if (name.length() == 1)
+            lChar += "X";
+        else if (name.length() == 2) 
+            lChar += name;
+        else if (name.equals(""))
+            lChar = "XX";
+        else
+            lChar = name.substring(name.length()-1);
+        String id = yr+"-"+mnt+"-"+dtInt+"-";
+        if (name.equals(""))
+            id += "XX";
+        else if (name.length() == 2)
+            id += name;
+        else
+            id += fChar + "-" + lChar;
+        
+        return id;
     }
 }
