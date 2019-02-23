@@ -64,7 +64,14 @@ public class Drive {
     }
     
     public void displayDrive() {
-        System.out.println("ID: " + newId + " Date of drive: " + dateOfDrive + " Duration: " + duration + " Distance: " + distance + " Origin: " + origin + " Destination: " + destination);
+        System.out.println("Drive Details: ");
+        System.out.println("ID: " + newId);
+        System.out.println("Date of drive: " + dateOfDrive);
+        System.out.println("Duration: " + duration);
+        System.out.println("Distance: " + distance);
+        System.out.println("Origin: " + origin);
+        System.out.println("Destination: " + destination);
+        System.out.println();
     }
     
     private String createID(Date newDate, String name) {
@@ -103,7 +110,7 @@ public class Drive {
         else if (name.length() == 2)
             id += name;
         else
-            id += fChar + "-" + lChar;
+            id += fChar.toUpperCase() + lChar.toUpperCase();
         
         return id;
     }

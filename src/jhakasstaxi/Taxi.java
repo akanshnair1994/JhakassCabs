@@ -50,7 +50,12 @@ public class Taxi {
         return capacity;
     }
     public void displayTaxi() {
-        System.out.println("ID: " + newId +" Taxi Number: " + taxiNumber + " Model: " + model + " Capacity: " + capacity );
+        System.out.println("Taxi Details: ");
+        System.out.println("ID: " + newId);
+        System.out.println("Taxi Number: " + taxiNumber);
+        System.out.println("Model: " + model);
+        System.out.println("Capacity: " + capacity);
+        System.out.println("");
     }
     
     private String createID(Date newDate, String name) {

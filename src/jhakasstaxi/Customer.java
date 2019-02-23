@@ -72,7 +72,13 @@ public class Customer extends Person {
     }
 
     public void displayCustomer() {
-        System.out.println("Cutomer Id: " + cutomerId + "Registration Date: " + registraionDate + " type: " + type + " Payment Method: " + paymentMethod + "Category:" + category);
+        System.out.println("Customer Details: ");
+        System.out.println("Cutomer Id: " + cutomerId);
+        System.out.println("Registration Date: " + registraionDate);
+        System.out.println("Type: " + type);
+        System.out.println("Payment Method: " + paymentMethod);
+        System.out.println("Category: " + category);
+        System.out.println("");
     }
 }
 //id is part of const not part of paramt of const

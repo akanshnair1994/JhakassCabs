@@ -71,7 +71,13 @@ public class Person {
     }
 
     public void displayPerson() {
-        System.out.println("ID: " + newId + " First Name: " + firstName + " Last Name: " + lastName + " Address: " + address + " Gender: " + gender);
+        System.out.println("Person Details: ");
+        System.out.println("ID: " + newId);
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Address: " + address);
+        System.out.println("Gender: " + gender);
+        System.out.println("");
     }
 
     protected String createID(Date newDate, String name) {

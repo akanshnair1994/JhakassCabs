@@ -43,7 +43,11 @@ public class Rating {
         return comment;
     }
     public void displayRating() {
-        System.out.println("ID: " + newId +" Driver's Rating: " + rate + " Comment " + comment );
+        System.out.println("Rating Details: ");
+        System.out.println("ID: " + newId);
+        System.out.println("Driver's Rating: " + rate);
+        System.out.println("Comment: " + comment);
+        System.out.println("");
     }
     
     private String createID(Date newDate, String name) {
