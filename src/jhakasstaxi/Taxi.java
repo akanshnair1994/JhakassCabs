@@ -58,7 +58,7 @@ public class Taxi {
         System.out.println("");
     }
     
-    private String createID(Date newDate, String name) {
+    public static String createID(Date newDate, String name) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MMM-dd");
         String date = sdf.format(newDate);
         String[] dt = date.split("-");
