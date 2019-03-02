@@ -28,6 +28,7 @@ public class JhakassTaxi {
         person.displayPerson();
         driver.displayDriver();
         drive.displayDrive();
+        customer.displayCustomer();
         customer.displayPerson();
         taxi.displayTaxi();
         rating.displayRating();
@@ -45,6 +46,7 @@ public class JhakassTaxi {
         person.displayPerson();
         driver.displayDriver();
         drive.displayDrive();
+        customer.displayCustomer();
         customer.displayPerson();
         taxi.displayTaxi();
         rating.displayRating();

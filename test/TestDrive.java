@@ -49,28 +49,4 @@ public class TestDrive {
         
         assertEquals(expectedResult, realResult);
     }
-
-    @Test
-    public void testCreateID2() {
-        System.out.println("Test Number 2 for createID() method in class Drive");
-        
-        Date date = new Date();
-        String name = "Jameel";
-        String expectedResult = "19-Mar-E-AH";
-        String realResult = Drive.createID(date, name);
-        
-        assertEquals(expectedResult, realResult);
-    }
-
-    @Test
-    public void testCreateID3() {
-        System.out.println("Test Number 3 for createID() method in class Drive");
-        
-        Date date = new Date(2020, 2, 2);
-        String name = "Akansh";
-        String expectedResult = "19-Mar-E-AH";
-        String realResult = Drive.createID(date, name);
-        
-        assertEquals(expectedResult, realResult);
-    }
 }

@@ -64,7 +64,7 @@ public class Driver extends Person {
     
     public void displayDriver() {
         System.out.println("Driver Details: ");
-        System.out.println("Driver ID: " + newId);
+        System.out.println("Driver ID: " + id);
         System.out.println("Person ID: " + super.newId);
         System.out.println("Driver Name: " + driverName);
         System.out.println("ID: " + id);
