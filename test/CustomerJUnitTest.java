@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author 1896513
  */
-public class PersonJUnitTest {
+public class CustomerJUnitTest {
     
-    public PersonJUnitTest() {
+    public CustomerJUnitTest() {
     }
     
     @BeforeClass
@@ -37,14 +37,14 @@ public class PersonJUnitTest {
     public void tearDown() {
     }
     
-    @Test
-    public void testCreateID3(){
+     @Test
+    public void testCreateID1(){
         System.out.println("Create ID 3");
         
         Date dt=new Date();
-        String name = "Kushal";
-        String expectedResult = "19-Mar-E-KL";
-        String realResult = jhakasstaxi.Person.createID(dt, name);
+        String name = "Patel";
+        String expectedResult = "19-Mar-E-PL";
+        String realResult = jhakasstaxi.Customer.createID(dt, name);
         
         assertEquals(expectedResult, realResult);
     }
