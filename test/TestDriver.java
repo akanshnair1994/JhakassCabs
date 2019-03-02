@@ -49,6 +49,32 @@ public class TestDriver {
         assertEquals(expectedResult, realResult);
         //assertEquals(expectedResult, realResult, 0.01);
     }
+    
+    @Test
+    public void driverTest2()
+    {
+        System.out.println("Test number 2 for createId method");
+
+        Date date = new Date();
+        String name = "Jay";
+        String expectedResult = "19-Mar-E-JL";
+        String realResult = jhakasstaxi.Driver.createID(date, name);
+        assertEquals(expectedResult, realResult);
+        //assertEquals(expectedResult, realResult, 0.01);
+    }
+    
+    @Test
+    public void driverTest3()
+    {
+        System.out.println("Test number 3 for createId method");
+
+        Date date = new Date(2020, 2, 2);
+        String name = "Jameel";
+        String expectedResult = "19-Mar-E-JL";
+        String realResult = jhakasstaxi.Driver.createID(date, name);
+        assertEquals(expectedResult, realResult);
+        //assertEquals(expectedResult, realResult, 0.01);
+    }
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
