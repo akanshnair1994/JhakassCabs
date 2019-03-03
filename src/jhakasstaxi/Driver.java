@@ -16,6 +16,7 @@ import java.util.Date;
 public class Driver extends Person {
 
     String driverName;
+    String driverId;
     String id;
     Date dateOfLicense;
     int experience;
@@ -25,8 +26,8 @@ public class Driver extends Person {
         driverName = DriverName;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setDriverId(String driverId) {
+        this.driverId = driverId;
     }
 
     public void setDateOfLicense(Date dateOfLicense) {
@@ -41,8 +42,8 @@ public class Driver extends Person {
         return driverName;
     }
 
-    public String getId() {
-        return id;
+    public String getDriverId() {
+        return driverId;
     }
 
     public Date getDateOfLicense() {
@@ -53,18 +54,18 @@ public class Driver extends Person {
         return experience;
     }
 
-    public Driver(Date newId, String driverName, String id, Date dateOfLicense, int experience, Date superDate, String firstName, String lastName, int phoneNo, String address, String gender) {
+    public Driver(Date newId, String driverName, String driverId, Date dateOfLicense, int experience, Date superDate, String firstName, String lastName, int phoneNo, String address, String gender) {
         super(superDate, firstName, lastName, phoneNo, address, gender);
         id = createID(newId, driverName);
         this.driverName = driverName;
-        this.id = id;
+        this.driverId = driverId;
         this.dateOfLicense = dateOfLicense;
         this.experience = experience;
     }
     
     public void displayDriver() {
         System.out.println("Driver Details: ");
-        System.out.println("Driver ID: " + id);
+        System.out.println("Driver ID: " + driverId);
         System.out.println("Person ID: " + super.newId);
         System.out.println("Driver Name: " + driverName);
         System.out.println("ID: " + id);
