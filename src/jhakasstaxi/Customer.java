@@ -23,6 +23,7 @@ public class Customer extends Person {
 
     public Customer(String cutomerId, Date registraionDate, String type, String paymentMethod, String category, Date id, String firstName, String lastName, int phoneNo, String address, String gender) {
         super(id, firstName, lastName, phoneNo, address, gender);
+        System.out.println("-----------------------------"+id+"--------------------------");
         newId = createID(id, category);
         this.cutomerId = cutomerId;
         this.registraionDate = registraionDate;

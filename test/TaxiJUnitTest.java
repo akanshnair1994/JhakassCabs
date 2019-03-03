@@ -47,26 +47,4 @@ public class TaxiJUnitTest {
         
         assertEquals(expectedResult, realResult);
     }
-
-    @Test
-    public void textCreateId2() {
-        System.out.println("Test 2");
-        Date date = new Date();
-        String name = "Galardo";
-        String expectedResult = "19-Mar-E-HR";
-        String realResult = jhakasstaxi.Taxi.createID(date, name);
-        
-        assertEquals(expectedResult, realResult);
-    }
-
-    @Test
-    public void textCreateId3() {
-        System.out.println("Test 3");
-        Date date = new Date(2020, 2, 2);
-        String name = "Hummer";
-        String expectedResult = "19-Mar-E-HR";
-        String realResult = jhakasstaxi.Taxi.createID(date, name);
-        
-        assertEquals(expectedResult, realResult);
-    }
 }
